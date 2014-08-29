@@ -16,6 +16,7 @@
               <li><%= link_to "Home", '#' %></li>
               <% if current_user %>
                 <li><%= link_to "Upload", "/users/#{current_user.id}/photos/new" %></li>
+                <li><%= link_to "Photos", "/users/#{current_user.id}/photos/" %></li>
               <% end %>
             </ul>
             <ul class="nav navbar-nav pull-right">
