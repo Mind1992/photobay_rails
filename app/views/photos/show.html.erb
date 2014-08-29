@@ -1,3 +1,2 @@
-<% @user.photos.each do |photo| %>
-  <%= image_tag photo.photo.url(:medium), class: "img-thumb" %>
-<% end %>
+<%= image_tag @photo.photo.url,  class: "img-thumb" %>
+
