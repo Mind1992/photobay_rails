@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :sessions
-  resources :users
+  resources :users do
+    resources :photos
+  end
 end
