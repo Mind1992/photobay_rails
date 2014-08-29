@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: photobay_rails_development
+
+test:
+  adapter: postgresql
+  database: photobay_rails_test
