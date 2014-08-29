@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav pull-left">
               <%= link_to "photobay", '#', id: "logo" %>
               <li><%= link_to "Home", '#' %></li>
-              <li><%= link_to "Upload"%></li>
+              <li><%= link_to "Upload", "/users/#{current_user.id}/photos/new" %></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                <% if current_user %>

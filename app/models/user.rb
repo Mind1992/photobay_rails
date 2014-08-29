@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+has_many :photos
 has_secure_password
 validates :email, presence: true,
                   uniqueness: { case_sensitive: false },
@@ -14,5 +15,4 @@ private
     self.user_name = self.user_name.downcase if self.user_name
     self.email = self.email.downcase if self.email
   end
-
 end
