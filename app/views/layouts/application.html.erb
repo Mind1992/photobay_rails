@@ -14,7 +14,9 @@
             <ul class="nav navbar-nav pull-left">
               <%= link_to "photobay", '#', id: "logo" %>
               <li><%= link_to "Home", '#' %></li>
-              <li><%= link_to "Upload", "/users/#{current_user.id}/photos/new" %></li>
+              <% if current_user %>
+                <li><%= link_to "Upload", "/users/#{current_user.id}/photos/new" %></li>
+              <% end %>
             </ul>
             <ul class="nav navbar-nav pull-right">
                <% if current_user %>
@@ -29,9 +31,6 @@
         </div>
       </div>
     </header>
-
-
-
 <%= flash[:notice] %>
 <%= flash[:alert] %>
 

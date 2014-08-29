@@ -1,7 +1,8 @@
-<%= form_for [@user, @photo], :html => { :multipart => true } do |f| %>
-  <div class="form-group">
-    <%= f.file_field :photo %>
-  </div>
-  <%= f.submit "Upload" %>
+<%= form_for  [@user, @photo], :html => { :multipart => true } do |f| %>
 
+  <div class="form-group">
+    <%= f.label :photo %>
+    <%= f.file_field :photo, html: {class: 'form-control'} %>
+  </div>
+    <%= f.submit "Upload", class: "btn btn-primary" %>
 <% end %>
